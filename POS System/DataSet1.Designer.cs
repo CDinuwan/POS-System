@@ -509,6 +509,8 @@ namespace POS_System {
             
             private global::System.Data.DataColumn columnpdsec;
             
+            private global::System.Data.DataColumn columnpaymentby;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtSoldDataTable() {
@@ -624,6 +626,14 @@ namespace POS_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn paymentbyColumn {
+                get {
+                    return this.columnpaymentby;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -659,7 +669,7 @@ namespace POS_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dtSoldRow AdddtSoldRow(string id, string transno, string pcode, string price, string qty, string disc, string total, string sdate, string status, string pdsec) {
+            public dtSoldRow AdddtSoldRow(string id, string transno, string pcode, string price, string qty, string disc, string total, string sdate, string status, string pdsec, string paymentby) {
                 dtSoldRow rowdtSoldRow = ((dtSoldRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -671,7 +681,8 @@ namespace POS_System {
                         total,
                         sdate,
                         status,
-                        pdsec};
+                        pdsec,
+                        paymentby};
                 rowdtSoldRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdtSoldRow);
                 return rowdtSoldRow;
@@ -704,6 +715,7 @@ namespace POS_System {
                 this.columnsdate = base.Columns["sdate"];
                 this.columnstatus = base.Columns["status"];
                 this.columnpdsec = base.Columns["pdsec"];
+                this.columnpaymentby = base.Columns["paymentby"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -729,6 +741,8 @@ namespace POS_System {
                 base.Columns.Add(this.columnstatus);
                 this.columnpdsec = new global::System.Data.DataColumn("pdsec", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpdsec);
+                this.columnpaymentby = new global::System.Data.DataColumn("paymentby", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpaymentby);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3045,6 +3059,22 @@ namespace POS_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string paymentby {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtSold.paymentbyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'paymentby\' in table \'dtSold\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtSold.paymentbyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsidNull() {
                 return this.IsNull(this.tabledtSold.idColumn);
             }
@@ -3161,6 +3191,18 @@ namespace POS_System {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetpdsecNull() {
                 this[this.tabledtSold.pdsecColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IspaymentbyNull() {
+                return this.IsNull(this.tabledtSold.paymentbyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetpaymentbyNull() {
+                this[this.tabledtSold.paymentbyColumn] = global::System.Convert.DBNull;
             }
         }
         

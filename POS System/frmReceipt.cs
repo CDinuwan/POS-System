@@ -47,6 +47,48 @@ namespace POS_System
         {
 
         }
+        public void LoadCard()
+        {
+            ReportDataSource rptDataSource;
+            try
+            {
+                this.reportViewer1.LocalReport.ReportPath = Application.StartupPath + @"\Reports\Report8.rdlc";
+                this.reportViewer1.LocalReport.DataSources.Clear();
+
+                DataSet1 ds = new DataSet1();
+                SqlDataAdapter da = new SqlDataAdapter();
+
+                con.Open();
+                da.SelectCommand = new SqlCommand("select c.id,c.transno,c.pcode,c.price,c.qty,c.disc,c.total,c.status,p.pdsec from tblCart as c inner join tblProduct as p on p.pcode=c.pcode where transno like'" + f.lblTransno.Text + "'", con);
+                da.Fill(ds.Tables["dtSold"]);
+                con.Close();
+
+                ReportParameter pDiscount = new ReportParameter("pDiscount", f.lblDiscount.Text);
+                ReportParameter pTotal = new ReportParameter("pTotal", f.lblTotal.Text);
+                ReportParameter pStore = new ReportParameter("pStore", store);
+                ReportParameter pAddress = new ReportParameter("pAddress", Address);
+                ReportParameter pTransaction = new ReportParameter("pTransaction", "Invoice #:" + f.lblTransno.Text);
+
+                reportViewer1.LocalReport.SetParameters(pDiscount);
+                reportViewer1.LocalReport.SetParameters(pTotal);
+                reportViewer1.LocalReport.SetParameters(pStore);
+                reportViewer1.LocalReport.SetParameters(pAddress);
+                reportViewer1.LocalReport.SetParameters(pTransaction);
+
+                rptDataSource = new ReportDataSource("DataSet1", ds.Tables["dtSold"]);
+                reportViewer1.LocalReport.DataSources.Add(rptDataSource);
+                reportViewer1.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
+                reportViewer1.ZoomMode = ZoomMode.Percent;
+                reportViewer1.ZoomPercent = 100;
+
+            }
+            catch (Exception er)
+            {
+                con.Close();
+                MessageBox.Show(er.Message);
+            }
+        }
+
         public void LoadReport(string pcash,string pchange)
         {
             ReportDataSource rptDataSource;

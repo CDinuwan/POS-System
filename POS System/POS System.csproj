@@ -335,6 +335,7 @@
     <EmbeddedResource Include="Report5.rdlc" />
     <EmbeddedResource Include="Report6.rdlc" />
     <EmbeddedResource Include="Report7.rdlc" />
+    <EmbeddedResource Include="Report8.rdlc" />
     <EmbeddedResource Include="SearchProduct_Instock.resx">
       <DependentUpon>SearchProduct_Instock.cs</DependentUpon>
     </EmbeddedResource>

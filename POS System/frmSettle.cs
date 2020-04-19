@@ -125,7 +125,7 @@ namespace POS_System
                         con.Close();
 
                         con.Open();
-                        cm = new SqlCommand("update tblCart set status ='Sold' where id = '" + fpos.dataGridView1.Rows[i].Cells[1].Value.ToString() + "'",con);
+                        cm = new SqlCommand("update tblCart set status ='Sold',paymentby='Cash' where id = '" + fpos.dataGridView1.Rows[i].Cells[1].Value.ToString() + "'",con);
                         cm.ExecuteNonQuery();
                         con.Close();
                     }
@@ -165,6 +165,30 @@ namespace POS_System
             {
                 btnEnter_Click(sender, e);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < fpos.dataGridView1.Rows.Count; i++)
+            {
+                con.Open();
+                cm = new SqlCommand("update tblProduct set qty=qty-" + int.Parse(fpos.dataGridView1.Rows[i].Cells[5].Value.ToString()) + "where pcode ='" + fpos.dataGridView1.Rows[i].Cells[2].Value.ToString() + "'", con);
+                cm.ExecuteNonQuery();
+                con.Close();
+
+                con.Open();
+                cm = new SqlCommand("update tblCart set status ='Sold',paymentby='Card' where id = '" + fpos.dataGridView1.Rows[i].Cells[1].Value.ToString() + "'", con);
+                cm.ExecuteNonQuery();
+                con.Close();
+            }
+            frmReceipt frm = new frmReceipt(fpos);
+            frm.LoadCard();
+            frm.ShowDialog();
+
+            MessageBox.Show("payment successfully saved.", "payment", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            fpos.GetTransNo();
+            fpos.LoadCart();
+            this.Dispose();
         }
     }
 }

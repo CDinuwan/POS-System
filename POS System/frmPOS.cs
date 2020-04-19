@@ -342,5 +342,10 @@ namespace POS_System
                 LoadCart();
             }
         }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
