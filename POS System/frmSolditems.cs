@@ -40,19 +40,19 @@ namespace POS_System
             con.Open();
             if (cboCashier.Text == "All Cashier")
             {
-                cm = new SqlCommand("select c.id,c.transno,c.pcode,p.pdsec,c.price,c.qty,c.disc,c.total from tblCart as c inner join tblProduct as p on c.pcode=p.pcode where status like 'Sold' and sdate between '" + dt1.Value + "' and '" + dt2.Value + "'", con);
+                cm = new SqlCommand("select c.id,c.transno,c.pcode,p.pdsec,c.price,c.qty,c.disc,c.total,c.paymentby from tblCart as c inner join tblProduct as p on c.pcode=p.pcode where status like 'Sold' and sdate between '" + dt1.Value + "' and '" + dt2.Value + "'", con);
 
             }
             else
             {
-                cm = new SqlCommand("select c.id,c.transno,c.pcode,p.pdsec,c.price,c.qty,c.disc,c.total from tblCart as c inner join tblProduct as p on c.pcode=p.pcode where status like 'Sold' and sdate between '" + dt1.Value + "' and '" + dt2.Value + "'and cashier like'" + cboCashier.Text + "'", con);
+                cm = new SqlCommand("select c.id,c.transno,c.pcode,p.pdsec,c.price,c.qty,c.disc,c.total,c.paymentby from tblCart as c inner join tblProduct as p on c.pcode=p.pcode where status like 'Sold' and sdate between '" + dt1.Value + "' and '" + dt2.Value + "'and cashier like'" + cboCashier.Text + "'", con);
             }
             dr = cm.ExecuteReader();
             while(dr.Read())
             {
                 total += double.Parse(dr["total"].ToString());
                 i += 1;
-                dataGridView1.Rows.Add(i, dr["id"].ToString(), dr["transno"].ToString(), dr["pcode"].ToString(), dr["pdsec"].ToString(), dr["price"].ToString(), dr["qty"].ToString(), dr["disc"].ToString(), dr["total"].ToString());
+                dataGridView1.Rows.Add(i, dr["id"].ToString(), dr["transno"].ToString(), dr["pcode"].ToString(), dr["pdsec"].ToString(), dr["price"].ToString(), dr["qty"].ToString(), dr["disc"].ToString(), dr["total"].ToString(),dr["paymentby"].ToString());
             }
             dr.Close();
             con.Close();

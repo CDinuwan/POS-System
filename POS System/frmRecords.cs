@@ -95,12 +95,12 @@ namespace POS_System
                     dataGridView2.Rows.Clear();
                     int i = 0;
                     con.Open();
-                    cm = new SqlCommand("select c.pcode,p.pdsec,sum(c.qty) as tot_qty,sum(c.disc) as tot_disc,sum(c.total) as total from tblCart as c inner join tblProduct as p on c.pcode = p.pcode where status like 'Sold'and sdate between'"+dateTimePicker4.Value.ToString()+"'and '"+dateTimePicker3.Value.ToString()+"'group by c.pcode, p.pdsec, p.price ", con);
+                    cm = new SqlCommand("select c.pcode,c.paymentby,p.pdsec,sum(c.qty) as tot_qty,sum(c.disc) as tot_disc,sum(c.total) as total from tblCart as c inner join tblProduct as p on c.pcode = p.pcode where status like 'Sold'and sdate between'"+dateTimePicker4.Value.ToString()+"'and '"+dateTimePicker3.Value.ToString()+"'group by c.pcode, p.pdsec, p.price,c.paymentby ", con);
                     dr = cm.ExecuteReader();
                     while (dr.Read())
                     {
                         i++;
-                        dataGridView2.Rows.Add(i, dr["pcode"].ToString(), dr["pdsec"].ToString(),dr["tot_qty"].ToString(),dr["tot_disc"].ToString(),dr["total"].ToString()).ToString("#,##0.00"); 
+                        dataGridView2.Rows.Add(i, dr["pcode"].ToString(), dr["pdsec"].ToString(),dr["paymentby"].ToString(),dr["tot_qty"].ToString(),dr["tot_disc"].ToString(),dr["total"].ToString()).ToString("#,##0.00"); 
                     }
                     dr.Close();
                     con.Close();
