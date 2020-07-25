@@ -19,7 +19,7 @@ namespace POS_System
         DBConnection db = new DBConnection();
         SqlDataReader dr;
         frmPOS f;
-        string store = "Test Store & PVT Limited";
+        string store = "Thakshila Parmacy";
         string Address = "1/3,TextRoad,Test";
         public frmReceipt(frmPOS frm)
         {

@@ -106,7 +106,6 @@ namespace POS_System
             double sales = Double.Parse(lblTotal.Text);
             double vat = sales*db.GetVal();
             double vatable = sales-vat;
-            lblVat.Text = vat.ToString("#,#00.00");
             lblVatable.Text = vatable.ToString("#,#00.00");
             lblDisplayTot.Text=sales.ToString("#,#00.00");
         }

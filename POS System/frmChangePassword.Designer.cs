@@ -189,7 +189,7 @@
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(22, 156);
+            this.btnSave.Location = new System.Drawing.Point(23, 160);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(359, 30);
             this.btnSave.TabIndex = 11;
@@ -201,7 +201,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(409, 191);
+            this.ClientSize = new System.Drawing.Size(409, 199);
             this.ControlBox = false;
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtConfirm);

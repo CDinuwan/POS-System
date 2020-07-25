@@ -59,11 +59,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(15, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(15, 11, 3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 13);
+            this.label1.Size = new System.Drawing.Size(138, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Void Cancel Order";
             // 
@@ -71,8 +72,8 @@
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(291, 5);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(180, 5, 0, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(286, 5);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(130, 5, 0, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 31);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
