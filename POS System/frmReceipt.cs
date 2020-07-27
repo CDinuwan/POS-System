@@ -19,8 +19,8 @@ namespace POS_System
         DBConnection db = new DBConnection();
         SqlDataReader dr;
         frmPOS f;
-        string store = "Thakshila Parmacy";
-        string Address = "1/3,TextRoad,Test";
+        string store = "Thakshila Pharmacy";
+        string Address = "No.37,Supermarket,Walasmulla,Matara";
         public frmReceipt(frmPOS frm)
         {
             InitializeComponent();
@@ -85,7 +85,7 @@ namespace POS_System
             catch (Exception er)
             {
                 con.Close();
-                MessageBox.Show(er.Message);
+                MessageBox.Show("Error");
             }
         }
 
@@ -131,7 +131,7 @@ namespace POS_System
             catch (Exception er)
             {
                 con.Close();
-                MessageBox.Show(er.Message);
+                MessageBox.Show("Error");
             }
         }
 

@@ -788,7 +788,8 @@
                     <TextRun>
                       <Value>=Parameters!pStore.Value</Value>
                       <Style>
-                        <FontSize>9pt</FontSize>
+                        <FontSize>12pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -828,9 +829,9 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>pAddress</rd:DefaultName>
-              <Top>0.26736in</Top>
+              <Top>0.32292in</Top>
               <Left>0.03125in</Left>
-              <Height>0.36458in</Height>
+              <Height>0.30902in</Height>
               <Width>3.25in</Width>
               <ZIndex>1</ZIndex>
               <Style>
@@ -850,7 +851,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Cashier _______</Value>
+                      <Value>Cashier 1</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>
@@ -858,7 +859,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox6</rd:DefaultName>
-              <Top>0.65972in</Top>
+              <Top>1.03472in</Top>
               <Left>0.03125in</Left>
               <Height>0.25in</Height>
               <Width>3.21875in</Width>
@@ -890,7 +891,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>pTransaction</rd:DefaultName>
-              <Top>1.04167in</Top>
+              <Top>1.29167in</Top>
               <Height>0.25in</Height>
               <Width>3.25in</Width>
               <ZIndex>3</ZIndex>
@@ -921,11 +922,42 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>pTransaction1</rd:DefaultName>
-              <Top>1.34722in</Top>
+              <Top>1.59722in</Top>
               <Left>0.03125in</Left>
               <Height>0.25in</Height>
               <Width>3.25in</Width>
               <ZIndex>4</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox26">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>047-2254945</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox18</rd:DefaultName>
+              <Top>0.67361in</Top>
+              <Height>0.25in</Height>
+              <Width>3.25in</Width>
+              <ZIndex>5</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>

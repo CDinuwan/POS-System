@@ -48,7 +48,7 @@ namespace POS_System
             }catch(Exception err)
             {
                 con.Close();
-                MessageBox.Show(err.Message);
+                MessageBox.Show("Error");
             }
         }
         private void Clear()
@@ -77,7 +77,7 @@ namespace POS_System
                 }
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error");
             }
         }
 

@@ -83,6 +83,10 @@ namespace POS_System
                 MessageBox.Show(er.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        
+
+        private void frmStore_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

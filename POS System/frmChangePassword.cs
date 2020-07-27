@@ -59,8 +59,13 @@ namespace POS_System
             }catch(Exception er)
             {
                 con.Close();
-                MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void frmChangePassword_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -89,7 +89,7 @@ namespace POS_System
             catch (Exception err)
             {
                 con.Close();
-                MessageBox.Show(err.Message);
+                MessageBox.Show("Error");
             }
         }
 

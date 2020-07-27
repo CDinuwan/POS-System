@@ -61,7 +61,7 @@ namespace POS_System
             }catch(Exception er)
             {
                 con.Close();
-                MessageBox.Show(er.Message,sittle,MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Error",sittle,MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
 
@@ -139,7 +139,7 @@ namespace POS_System
             catch (Exception er)
             {
                 con.Close();
-                MessageBox.Show(er.Message, sittle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Error", sittle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
 
@@ -184,7 +184,7 @@ namespace POS_System
             }catch(Exception er) 
             { 
                 con.Close();
-                MessageBox.Show(er.Message, sittle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Error", sittle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         public void MyDashBoad()

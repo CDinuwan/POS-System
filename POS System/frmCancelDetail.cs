@@ -103,7 +103,7 @@ namespace POS_System
                 
             }catch(Exception er)
             {
-                MessageBox.Show(er.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Error occured","Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
 

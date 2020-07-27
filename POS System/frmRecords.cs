@@ -114,7 +114,7 @@ namespace POS_System
             }
             catch(Exception er)
             {
-                MessageBox.Show(er.Message,"Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Error","Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
 

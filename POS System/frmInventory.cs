@@ -66,7 +66,7 @@ namespace POS_System
             catch (Exception er)
             {
                 con.Close();
-                MessageBox.Show(er.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Error", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         public void LoadTopSelling(string sql)
@@ -98,7 +98,7 @@ namespace POS_System
             catch(Exception er)
             {
                 con.Close();
-                MessageBox.Show(er.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Error", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         public void LoadStockInReport(string psql)
@@ -125,7 +125,7 @@ namespace POS_System
             }
             catch (Exception er)
             {
-                MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         public void LoadCancelledOrder(string psql)
@@ -152,7 +152,7 @@ namespace POS_System
             }
             catch (Exception er)
             {
-                MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         public void LoadReport()
@@ -178,7 +178,7 @@ namespace POS_System
                 reportViewer1.ZoomPercent = 100;
             }catch(Exception er)
             {
-                MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

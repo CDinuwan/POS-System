@@ -70,7 +70,7 @@ namespace POS_System
             }catch(Exception er)
             {
                 con.Close();
-                MessageBox.Show(er.Message);
+                MessageBox.Show("Error");
             }
         }
 
@@ -121,7 +121,7 @@ namespace POS_System
             }
             catch(Exception er)
             {
-                MessageBox.Show(er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -152,7 +152,7 @@ namespace POS_System
             }catch(Exception er)
             {
                 con.Close();
-                MessageBox.Show(er.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Error", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -197,7 +197,7 @@ namespace POS_System
             }catch(Exception er)
             {
                 con.Close();
-                MessageBox.Show(er.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Error", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
